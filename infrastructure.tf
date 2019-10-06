@@ -63,3 +63,13 @@ module "service" {
   alb_target_group_arn  = "${module.alb.alb_target_group_arn}"
   enable_autoscaling    = true
 }
+
+module "ecr" {
+  source  = "cloudposse/ecr/aws"
+  version = "0.7.0"
+  name    = "royalty-ecr"
+  tags = {
+    Environment = "int"
+    Managed     = "terraform"
+  }
+}
