@@ -19,3 +19,8 @@ terraform init
 ```bash
 terraform apply
 ```
+## Destroying the infrastructure
+Just execute this:
+```bash
+terraform destroy
+```
