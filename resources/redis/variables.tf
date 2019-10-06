@@ -20,3 +20,12 @@ variable "redis_subnets" {
   description = "Subnet identifiers where to host redis"
   type = "list"
 }
+
+variable "vpc_id" {
+  description = "VPC identifier"
+}
+
+variable "ingress_cidrs" {
+  description = "Map of Cdirs blocks to allow as inbound traffic. Keys are the description and values the Cdir block."
+  type = "map"
+}

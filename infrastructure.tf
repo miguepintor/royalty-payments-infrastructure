@@ -84,4 +84,9 @@ module "redis" {
   app_name      = "royalties"
   environment   = "int"
   redis_subnets = "${module.vpc.private_subnets}"
+  vpc_id        = "${module.vpc.vpc_id}"
+  ingress_cidrs = "${zipmap(
+    ["Private Subnet 1", "Private Subnet 2"],
+    module.vpc.private_subnets_cidr_blocks
+  )}"
 }
