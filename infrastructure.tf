@@ -73,3 +73,15 @@ module "ecr" {
     Managed     = "terraform"
   }
 }
+
+module "redis" {
+  source = "./resources/redis"
+
+  tags = {
+    Environment = "int"
+    Managed     = "terraform"
+  }
+  app_name      = "royalties"
+  environment   = "int"
+  redis_subnets = "${module.vpc.private_subnets}"
+}
