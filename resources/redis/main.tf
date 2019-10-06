@@ -18,7 +18,7 @@ resource "aws_elasticache_replication_group" "redis" {
   subnet_group_name = "${aws_elasticache_subnet_group.redis_subnets.name}"
   port                          = "${var.redis_port}"
   engine = "redis"
-  engine_version = "4.0"
+  engine_version = "4.0.10"
   tags = "${merge(
     var.tags,
     map(
