@@ -37,7 +37,7 @@ variable "container_port" {
 
 variable "instances" {
   description = "Number of servers instances"
-  default = 1
+  default = 2
 }
 
 variable "vpc_id" {
