@@ -1,7 +1,7 @@
 # royalty-payments-infrastructure
 Terraform templates to build the infrastructure for the royalty-payments system.
 
-It is basically consist in:
+It basically consist in:
 - A VPC: two private subnets, two public subnets and two availability zones.
 - A load balancer between the public subnets.
 - An ECS cluster where to host the ECS service. 
